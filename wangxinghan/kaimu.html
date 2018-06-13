@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>来自demons心跳</title>
+		<style type="text/css">
+			*{
+				padding:0;
+				margin: 0;
+			}
+			body{
+				background-color:black;
+			}
+			.heart{
+                position:absolute;
+                left: 50%;
+                top:50%;
+                margin-left: -150px;
+                margin-top: -135px;
+                width: 300px;
+                height:270px;
+                /*box-shadow: 2px 2px 5px #000;*/
+                filter:drop-shadow(0px 0px 20px rgb(255,20,20));//阴影实现:filter: drop-shadow(x偏移, y偏移, 模糊大小, 色值);
+                animation: test 1s linear infinite;
+            }
+            .heart:before,
+            .heart:after{
+                content: "";
+                position: absolute;
+                left: 150px;
+                width: 150px;
+                height: 240px;
+                background: rgb(255,0,0);
+                border-radius: 150px 150px 0 0;
+                transform:rotate(-45deg);
+                transform-origin: 0 100%;
+            }
+            .heart:after{
+                left: 0;
+                transform:rotate(45deg);
+                transform-origin: 100% 100%;//右下角为原点
+            }
+            @keyframes test{
+            	0%{
+                transform: scale(0.8,0.8);//向x,y轴缩放的比例
+                opacity: 1;
+                }
+                25%{
+                transform: scale(1,1);
+                opacity: 0.8;
+                }
+                100%{
+                transform: scale(0.8,0.8);
+                opacity: 1;
+                }
+            }        	
+		</style>
+	</head>
+	<body>
+		<div class="heart">	
+			<span id="Id"></span>
+		</div>			
+	</body>
+	<script type="text/javascript">
+	    var time = 5;
+		var timer;
+		//定时器
+		timer = setInterval(
+			function(){
+//				var Id = document.getElementById("Id");
+				if (time>=1){
+//					Id.innerHTML=time;
+					time--;
+				}else{
+					clearInterval(timer);//清除定时器
+					location.href="zuye.html";
+				}
+			},1000
+		);
+	</script>
+</html>
