@@ -218,27 +218,32 @@ nav ul li{
 }
 .card_group{
 	min-height: 300px;
-	display: flex;
-	padding-left: 350px;
-	padding-right: 350px;
-		
+	display: inline-flex;
+	width: 70%;
+	margin-left: 15%;	
 }
 .card1{
+	width: 50%;
 	background: rgba(0,0,0,0.2);
 }
 .card2{
+	width: 50%;
 	background: rgba(0,0,0,0.3);
 }
 .card3{
+	width: 50%;
 	background: rgba(0,0,0,0.3);
 }
 .card4{
+	width: 50%;
 	background: rgba(0,0,0,0.2);
 }
 .card5{
+	width: 50%;
 	background: rgba(0,0,0,0.2);
 }
 .card6{
+	width: 50%;
 	background: rgba(0,0,0,0.3);
 }
 .card_group h3{
